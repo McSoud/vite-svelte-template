@@ -1,8 +1,7 @@
 <script lang="ts">
+  import Head from "@/lib/components/template/Head.svelte";
   import Main from "@/lib/components/template/Main.svelte";
 </script>
 
-<svelte:head>
-  <title>Home</title>
-</svelte:head>
-<Main id="home" class="container bg-red-500">Test</Main>
+<Head title="Home" />
+<Main id="home">Test</Main>

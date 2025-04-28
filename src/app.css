@@ -1,11 +1,14 @@
 @import "tailwindcss";
+@import "./lib/assets/css/fonts.css";
+@import "./lib/assets/css/index.css";
 
 @theme {
-  /* color-mix(in oklab, var(--color-example-primary) %percentage%, transparent) */
+  /* color-mix(in oklab, var(--color-example-primary) percentage%, transparent) */
   --color-primary: #00552c;
   --color-secondary: #f0f0f0;
   --color-text: #333;
   --color-accent: #fff;
+  --color-background: #fff;
 
   --text-section-heading: clamp(1.5rem, 2vw, 2.25rem);
 
@@ -25,67 +28,12 @@
 }
 
 @layer base {
-  :root {
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
   body {
-    position: relative;
-    overflow-x: hidden;
-    background-color: #ffffff;
-    color: var(--color-text);
-    &:has(dialog[open]) {
-      overflow-y: hidden;
-    }
-  }
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100svh;
-  }
-  button,
-  a {
-    cursor: pointer;
-  }
-  ul > li {
-    display: contents;
-  }
-  input[type="number"] {
-    appearance: textfield;
-    -moz-appearance: textfield;
-  }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  ::-webkit-scrollbar {
-    -webkit-appearance: auto;
-    background-color: #3334;
-    height: 0.4rem;
-    width: 0.4rem;
-  }
-  ::-webkit-scrollbar-thumb:vertical,
-  ::-webkit-scrollbar-thumb:horizontal {
-    border-radius: 1.25rem;
-    background-color: var(--color-primary);
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-  }
-  ::backdrop {
-    background-color: #0008;
+    font-family: Poppins, sans-serif;
   }
 }
 
 @layer components {
-  .container {
-    padding-inline: var(--spacing-container-padding);
-    margin-inline: auto;
-  }
   /* Button */
   .button {
     border-radius: 0.5rem;
@@ -95,12 +43,11 @@
       color: #fff;
     }
   }
-  /* Input */
+  /* Inputs */
   .input-field,
   .select-field {
     width: 100%;
     label {
-      margin-bottom: calc(var(--spacing) * 0.5);
       font-weight: 600;
       .required {
         color: var(--color-red-600);
@@ -128,6 +75,38 @@
       }
     }
   }
+  /* Radio */
+  .radio-field {
+    label {
+      cursor: pointer;
+    }
+    .error-message {
+      color: var(--color-red-600);
+    }
+  }
+  /* Checkbox */
+  .checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  /* Modal */
+  dialog.modal {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    header {
+      padding: 0.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      .close svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+  /* Hover */
   .hover-pop {
     display: inline-block;
     transition:
