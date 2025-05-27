@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Router, Route } from "svelte-routing";
-  import Header from "./lib/components/template/Header.svelte";
-  import PageHome from "@/lib/pages/home/_index.svelte";
-  import Footer from "./lib/components/template/Footer.svelte";
+  import Header from "./components/template/Header.svelte";
+  import Footer from "./components/template/Footer.svelte";
+  import PageHome from "@/pages/home/_index.svelte";
 </script>
 
 <Router url="">

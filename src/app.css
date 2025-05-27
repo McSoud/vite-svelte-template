@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import "./lib/assets/css/fonts.css";
-@import "./lib/assets/css/index.css";
+@import "./assets/css/fonts.css";
+@import "./assets/css/index.css";
 
 @theme {
   /* color-mix(in oklab, var(--color-example-primary) percentage%, transparent) */

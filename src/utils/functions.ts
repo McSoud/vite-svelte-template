@@ -1,4 +1,4 @@
-// import { ModalId } from "@/lib/types/utils/components";
+// import { ModalId } from "@/types/utils/components";
 
 export function scrollToId(id: string) {
   const section = document.getElementById(id);

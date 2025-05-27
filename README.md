@@ -1,25 +1,113 @@
-# Svelte + TS + Vite
+## Project Structure
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+The project is structured as follows:
 
-## Recommended IDE Setup
+```
+src
+├── app.css
+├── App.svelte (routes)
+├── main.tsx
+├── vite-env.d.ts
+├── assets
+│   ├── css
+│   │   ├── fonts.css
+│   │   ├── index.css
+│   │   └── ...files.css (map, slider, etc.)
+│   ├── images
+│   │   ├── common
+│   │   ├── pages
+│   │   └── ...directories (dots, blobs, etc.)
+│   └── svgs
+│       ├── icons
+│       │   ├── Close.tsx
+│       │   ├── LoadingSpinner.tsx
+│       │   └── ...icons (trash, check, etc.)
+│       └── ...directories or files.tsx
+├── components
+│   ├── common
+│   │   └── ...directories or files.tsx (socials, cards, etc.)
+│   ├── inputs
+│   │   ├── Checkbox.tsx
+│   │   ├── Input.tsx
+│   │   ├── Radio.tsx
+│   │   └── Select.tsx
+│   ├── interactive
+│   │   └── Button.tsx
+│   ├── sections
+│   │   └── directories or files.tsx (contact, faq, etc.)
+│   ├── template
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── Main.tsx
+│   │   └── Modal.tsx
+│   └── utils
+│       └── RequiresAuthentication.tsx
+├── constants
+│   └── ...constants.ts (const SCREAMING_SNAKE_CASE)
+├── pages
+│   ├── NotFound.tsx
+│   ├── home
+│   │   ├── _hooks.tsx
+│   │   ├── _index.tsx
+│   │   └── ...OtherComponents.tsx
+│   └── ...directories or files.tsx (about, pricing, etc.)
+├── types
+│   ├── ...files.ts
+│   └── utils
+│       ├── components.tsx
+│       └── laravel.ts
+└── utils
+    ├── functions.ts
+    └── middleware.ts
+```
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Project dependencies
 
-## Need an official Svelte framework?
+The project is using the following dependencies:
+svelte
+typescript
+axios
+svelte-routing
+tailwindcss
+clsx
+tailwind-merge
+svelte-sonner
+prettier - prettier-plugin-tailwindcss\
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+"svelte": "^5.20.2" -D
+Svelte is the library used to create the user interface.
+
+"typescript": "~5.7.2" -D
+Typescript is used for making the project type safe.
+
+"svelte-routing": "^2.13.0" -D
+Svelte-routing is used to handle the routing of the application.
+
+"axios": "^1.7.9" -D
+Axios is used to make http requests.
+
+"zod": "^3.24.2" -D
+Zod is a typescript library for data validation.
+
+"tailwindcss": "^4.0.6" -D
+Tailwindcss v4 is used to style the project. No tailwind.config.js file is provided, as it is not necessary. All the configuration is done in the App.css file.
+
+"clsx": "^2.1.1" -D
+Clsx is used to display conditional classes.
+
+"tailwind-merge": "^3.0.1" -D
+Tailwind-merge is used to merge the tailwind classes.
+
+"svelte-sonner": "^0.3.28" -D
+Sonner is used to create the toast notifications.
+
+"prettier": "^3.5.0" -D
+Prettier is used to format the code.
+
+"prettier-plugin-tailwindcss": "^0.6.11" -D
+Prettier-plugin-tailwindcss is used to format the tailwind classes.
 
 ## Technical considerations
-
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
 
 **Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
 
@@ -42,6 +130,6 @@ If you have state that's important to retain within a component, consider creati
 ```ts
 // store.ts
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```
