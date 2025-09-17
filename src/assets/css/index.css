@@ -15,7 +15,7 @@
       overflow-y: hidden;
     }
   }
-  #root {
+  #app {
     display: flex;
     flex-direction: column;
     min-height: 100svh;
@@ -57,8 +57,5 @@
   .container {
     padding-inline: var(--spacing-container-padding);
     margin-inline: auto;
-  }
-  dialog {
-    margin: auto;
   }
 }

@@ -6,7 +6,7 @@ The project is structured as follows:
 src
 ├── app.css
 ├── App.svelte (routes)
-├── main.tsx
+├── main.svelte
 ├── vite-env.d.ts
 ├── assets
 │   ├── css
@@ -19,43 +19,41 @@ src
 │   │   └── ...directories (dots, blobs, etc.)
 │   └── svgs
 │       ├── icons
-│       │   ├── Close.tsx
-│       │   ├── LoadingSpinner.tsx
+│       │   ├── Close.svelte
+│       │   ├── LoadingSpinner.svelte
 │       │   └── ...icons (trash, check, etc.)
-│       └── ...directories or files.tsx
+│       └── ...directories or files.svelte
 ├── components
 │   ├── common
-│   │   └── ...directories or files.tsx (socials, cards, etc.)
+│   │   └── ...directories or files.svelte (socials, cards, etc.)
 │   ├── inputs
-│   │   ├── Checkbox.tsx
-│   │   ├── Input.tsx
-│   │   ├── Radio.tsx
-│   │   └── Select.tsx
+│   │   ├── Checkbox.svelte
+│   │   ├── Input.svelte
+│   │   ├── Radio.svelte
+│   │   └── Select.svelte
 │   ├── interactive
-│   │   └── Button.tsx
+│   │   └── Button.svelte
 │   ├── sections
-│   │   └── directories or files.tsx (contact, faq, etc.)
+│   │   └── directories or files.svelte (contact, faq, etc.)
 │   ├── template
-│   │   ├── Footer.tsx
-│   │   ├── Header.tsx
-│   │   ├── Main.tsx
-│   │   └── Modal.tsx
+│   │   ├── Footer.svelte
+│   │   ├── Header.svelte
+│   │   ├── Main.svelte
+│   │   └── Modal.svelte
 │   └── utils
-│       └── RequiresAuthentication.tsx
+│       └── RequiresAuthentication.svelte
 ├── constants
 │   └── ...constants.ts (const SCREAMING_SNAKE_CASE)
 ├── pages
-│   ├── NotFound.tsx
+│   ├── NotFound.svelte
 │   ├── home
-│   │   ├── _hooks.tsx
-│   │   ├── _index.tsx
-│   │   └── ...OtherComponents.tsx
-│   └── ...directories or files.tsx (about, pricing, etc.)
+│   │   ├── _index.svelte
+│   │   └── ...OtherComponents.svelte
+│   └── ...directories or files.svelte (about, pricing, etc.)
 ├── types
 │   ├── ...files.ts
 │   └── utils
-│       ├── components.tsx
-│       └── laravel.ts
+│       └── _utils.ts
 └── utils
     ├── functions.ts
     └── middleware.ts

@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@mcsoud/types':
+        specifier: ^1.0.2
+        version: 1.0.2
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.0.3
         version: 5.0.3(svelte@5.31.1)(vite@6.3.5(@types/node@22.15.19)(jiti@2.4.2)(lightningcss@1.30.1))
@@ -237,6 +240,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@mcsoud/types@1.0.2':
+    resolution: {integrity: sha512-9YinvotSjyxH3KF+weMUtRuzc6p/ht4/O9vRZ1TJMSiGEvXaLgMOl9mu7zDDOvh73w6fbgoYOgbCbuJbuZi4TA==}
 
   '@rollup/rollup-android-arm-eabi@4.41.0':
     resolution: {integrity: sha512-KxN+zCjOYHGwCl4UCtSfZ6jrq/qi88JDUtiEFk8LELEHq2Egfc/FgW+jItZiOLRuQfb/3xJSgFuNPC9jzggX+A==}
@@ -1031,6 +1037,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@mcsoud/types@1.0.2': {}
 
   '@rollup/rollup-android-arm-eabi@4.41.0':
     optional: true
